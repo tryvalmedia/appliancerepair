@@ -668,8 +668,6 @@ function applyLocation(loc){
   const has=loc.city&&loc.city!=='undefined'&&loc.city!=='';
   const locStr=has?(loc.state?`${loc.city}, ${loc.state}`:loc.city):null;
   if(has){
-    const heroLoc=document.getElementById('heroLoc');
-    if(heroLoc) heroLoc.textContent=`Get Your Appliance Fixed in ${locStr} — Available Today`;
 
     const rt=document.getElementById('reviews-title');
     if(rt) rt.textContent=`What ${loc.city} Homeowners Are Saying`;
