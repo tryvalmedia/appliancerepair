@@ -404,7 +404,8 @@ footer { background:#08101e; padding:32px 32px 0; border-top:4px solid var(--blu
   <img src="hero-appliance.jpg" alt="Appliance repair technician fixing a refrigerator" class="hero-bg" loading="eager" fetchpriority="high">
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <h1 class="hero-h1" id="hero-h1">Get Your Appliance Fixed<br>in [City] — Available Today</h1>
+    <span class="hero-eyebrow" id="heroLoc">Local Appliance Technicians — Available Now</span>
+    <h1 class="hero-h1" id="hero-h1">Same &amp; Next-Day<br>Appliance Repair</h1>
 
     <p class="hero-tagline">Same-day service from a local, certified technician.<br>You know the cost before we start.</p>
     <a href="tel:+18000000000" class="hero-phone-btn">
@@ -629,9 +630,8 @@ function applyLocation(loc){
   const has=loc.city&&loc.city!=='undefined'&&loc.city!=='';
   const locStr=has?(loc.state?`${loc.city}, ${loc.state}`:loc.city):null;
   if(has){
-
-    const h1=document.getElementById('hero-h1');
-    if(h1) h1.innerHTML=`Get Your Appliance Fixed<br>in ${loc.city} — Available Today`;
+    const heroLoc=document.getElementById('heroLoc');
+    if(heroLoc) heroLoc.textContent=`Local Appliance Technicians in ${loc.city}, ${loc.state} — Available Now`;
     const rt=document.getElementById('reviews-title');
     if(rt) rt.textContent=`What ${loc.city} Homeowners Are Saying`;
   }
