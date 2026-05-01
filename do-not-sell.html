@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Do Not Sell My Personal Information — ApplianceRescueNow.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2342;--blue:#1b3c6e;--blue-lt:#2255a8;--green:#1A7A3C;
+  --white:#FFFFFF;--off:#F7F9FC;--border:#E2E8F0;--dark:#0D1B2A;
+  --mid:#475569;--gray:#94A3B8;--font:'Plus Jakarta Sans',-apple-system,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--dark);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+nav{background:var(--white);padding:16px 52px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,35,66,.08)}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.nav-name{font-size:17px;font-weight:800;color:var(--navy)}
+.nav-name span{color:var(--blue)}
+.nav-back{font-size:13px;color:var(--gray);text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:500}
+.nav-back:hover{color:var(--navy)}
+.nav-phone{font-size:17px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:7px}
+.nav-phone:hover{color:var(--blue)}
+.doc-header{background:var(--navy);padding:52px}
+.dh-inner{max-width:760px;margin:0 auto}
+.dh-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-lt);margin-bottom:12px}
+.dh-title{font-size:clamp(30px,4vw,46px);font-weight:800;color:var(--white);margin-bottom:12px;letter-spacing:-.4px}
+.dh-meta{font-size:12px;color:rgba(255,255,255,.4);display:flex;gap:16px;flex-wrap:wrap;font-weight:500}
+.doc-body{max-width:760px;margin:0 auto;padding:56px 52px 100px}
+.doc-intro{font-size:18px;color:var(--mid);line-height:1.8;margin-bottom:40px;padding-bottom:32px;border-bottom:2px solid var(--blue-lt)}
+.doc-section{margin-bottom:40px}
+.doc-section h2{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;padding-left:14px;border-left:3px solid var(--blue)}
+.doc-section p{color:var(--mid);margin-bottom:12px;font-size:15px;line-height:1.8}
+.doc-section p:last-child{margin-bottom:0}
+.doc-section ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:12px;padding-left:0}
+.doc-section ul li{display:flex;align-items:flex-start;gap:10px;color:var(--mid);font-size:15px;line-height:1.65}
+.doc-section ul li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:1px}
+.highlight-box{background:var(--off);border:1px solid var(--border);border-left:3px solid var(--blue);padding:18px 22px;margin:20px 0;border-radius:0 8px 8px 0}
+.highlight-box p{margin-bottom:0;color:var(--navy);font-weight:500}
+footer{background:var(--dark);padding:22px 52px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fl{font-size:14px;font-weight:700;color:rgba(255,255,255,.25)}
+.fl span{color:rgba(34,85,168,.5)}
+.flinks{display:flex;gap:20px}
+.flinks a{font-size:12px;color:rgba(255,255,255,.2);text-decoration:none}
+.flinks a:hover{color:rgba(255,255,255,.5)}
+.fcopy{font-size:11px;color:rgba(255,255,255,.15);max-width:380px;text-align:right;line-height:1.6}
+@media(max-width:600px){
+  nav{padding:14px 20px}
+  .doc-header{padding:36px 20px}
+  .doc-body{padding:36px 20px 80px}
+  footer{padding:18px 20px}
+  .nav-phone{display:none}
+}
+.opt-form{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:28px;margin-top:20px}
+.opt-form label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.opt-form input,.opt-form select{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:6px;font-size:14px;color:var(--dark);margin-bottom:16px;font-family:var(--font)}
+.opt-form input:focus,.opt-form select:focus{outline:none;border-color:var(--blue)}
+.opt-btn{background:var(--blue);color:#fff;border:none;padding:12px 32px;font-size:15px;font-weight:700;border-radius:6px;cursor:pointer;font-family:var(--font)}
+.opt-btn:hover{background:var(--navy)}
+.success-msg{display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:16px 20px;color:#1b5e20;font-weight:600;margin-top:16px}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <div class="nav-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+    </div>
+    <span class="nav-name">ApplianceRescue<span>Now</span></span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+  <a class="nav-phone" href="tel:+18000000000">📞 800-000-0000</a>
+</nav>
+
+<div class="doc-header">
+  <div class="dh-inner">
+    <div class="dh-label">Privacy Rights</div>
+    <div class="dh-title">Do Not Sell My Personal Information</div>
+    <div class="dh-meta">
+      <span>ApplianceRescueNow.com</span>
+      <span>Effective: January 1, 2026</span>
+      <span>Last Updated: April 30, 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="doc-body">
+
+  <p class="doc-intro">California residents have the right under the California Consumer Privacy Act (CCPA) to opt out of the sale of their personal information. This page explains your rights, what information we collect and share, and how to submit your opt-out request.</p>
+
+  <div class="doc-section">
+    <h2>1. Your Rights Under CCPA</h2>
+    <p>If you are a California resident, the California Consumer Privacy Act (CCPA) grants you specific rights regarding your personal information, including:</p>
+    <ul>
+      <li><strong>Right to Know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you, the sources from which it was collected, the purposes for collection and use, and the categories of third parties with whom we share it.</li>
+      <li><strong>Right to Delete:</strong> You have the right to request that we delete personal information we have collected from you, subject to certain exceptions permitted by law.</li>
+      <li><strong>Right to Opt Out of Sale:</strong> You have the right to direct us to not sell your personal information to third parties. This page provides the mechanism to exercise that right.</li>
+      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA rights. We will not deny you services, charge you different prices, or provide a different level of service because you exercised a privacy right.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Under the CCPA, "sale" includes sharing personal information with third parties for monetary or other valuable consideration. As a lead generation referral service, sharing your information with our appliance repair partner network may constitute a "sale" under this definition.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <h2>2. What We Collect and Share</h2>
+    <p>When you use ApplianceRescueNow.com to request appliance repair quotes, we collect and may share the following categories of personal information with third-party appliance repair companies and marketing partners:</p>
+    <ul>
+      <li><strong>Identifiers:</strong> Name, email address, phone number, and mailing or service address.</li>
+      <li><strong>Service Request Details:</strong> Appliance type, brand, model, age, and description of the problem requiring repair.</li>
+      <li><strong>Property Information:</strong> Whether you own or rent, property type, and ZIP code or service area.</li>
+      <li><strong>Internet or Network Activity:</strong> IP address, browser type, pages visited on our website, and referring website URLs.</li>
+      <li><strong>Geolocation Data:</strong> General location derived from your IP address or the service address you provide.</li>
+      <li><strong>Inferences:</strong> Inferences drawn from the above data to help match you with suitable appliance repair professionals.</li>
+    </ul>
+    <p>We share this information primarily with appliance repair service providers, home services companies, and marketing partners in our referral network. These third parties may use the information to contact you with quotes, promotions, and related offers.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>3. How to Opt Out</h2>
+    <p>To opt out of the sale of your personal information, please complete the form below. We will process your request within 15 business days and send a confirmation to the email address you provide.</p>
+    <p>Please provide accurate information so we can locate and properly process your request. All fields are required.</p>
+
+    <form class="opt-form" id="opt-form">
+      <label for="of-name">Full Name</label>
+      <input type="text" id="of-name" placeholder="Jane Smith" required>
+      <label for="of-email">Email Address</label>
+      <input type="email" id="of-email" placeholder="jane@example.com" required>
+      <label for="of-state">State of Residence</label>
+      <select id="of-state" required>
+        <option value="">Select your state…</option>
+        <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+      </select>
+      <button type="submit" class="opt-btn">Submit Opt-Out Request</button>
+    </form>
+    <div class="success-msg" id="success-msg">✓ Your opt-out request has been received. We will process it within 15 business days and confirm via email.</div>
+  </div>
+
+  <div class="doc-section">
+    <h2>4. After You Submit</h2>
+    <p>Once your opt-out request is received and verified, we will take the following steps:</p>
+    <ul>
+      <li>We will stop selling your personal information to third-party appliance repair companies and marketing partners going forward.</li>
+      <li>We will notify any third parties to whom we sold your information in the 90 days prior to your request, directing them to honor your opt-out where required by law.</li>
+      <li>We will send a confirmation to the email address you provided once your request has been processed, within 15 business days.</li>
+      <li>Your opt-out preference will be stored for at least 12 months before we may ask you to reauthorize the sale of your information.</li>
+    </ul>
+    <p>Please note that opting out of the sale of your information does not delete your information from our systems. To request deletion, please contact us separately at <a href="mailto:hello@appliancerescuenow.com">hello@appliancerescuenow.com</a>. Additionally, opting out does not affect our ability to use your information for internal operations or to fulfill a service request you have already submitted.</p>
+    <div class="highlight-box">
+      <p>If you have already received contacts from appliance repair companies as a result of a prior service request, those companies may have their own independent databases. You should contact each company separately to opt out of their communications.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <h2>5. Contact Us</h2>
+    <p>If you have questions about your CCPA rights, this opt-out process, or our data practices, please contact us through any of the following channels:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:hello@appliancerescuenow.com">hello@appliancerescuenow.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+18000000000">800-000-0000</a></li>
+      <li><strong>Operator:</strong> Tryval Media, Denver, CO</li>
+      <li><strong>Website:</strong> ApplianceRescueNow.com</li>
+    </ul>
+    <p>For additional information about our privacy practices, please review our full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="fl">ApplianceRescue<span>Now</span>.com</span>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  <span class="fcopy">© 2026 ApplianceRescueNow.com · Connecting homeowners with local appliance repair professionals nationwide.</span>
+</footer>
+
+<script>
+document.getElementById('opt-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.style.display='none';
+  document.getElementById('success-msg').style.display='block';
+});
+</script>
+
+</body>
+</html>
