@@ -606,21 +606,10 @@ function applyLocation(loc){
   const has=loc.city&&loc.city!=='undefined'&&loc.city!=='';
   const locStr=has?(loc.state?`${loc.city}, ${loc.state}`:loc.city):null;
   if(has){
-
     const h1=document.getElementById('hero-h1');
     if(h1) h1.innerHTML=`Get Your Appliance Fixed<br>in ${loc.city} — Available Today`;
     const rt=document.getElementById('reviews-title');
     if(rt) rt.textContent=`What ${loc.city} Homeowners Are Saying`;
-  }
-  const fallback=has?[locStr,locStr,locStr]:['Verified Homeowner','Verified Homeowner','Verified Homeowner'];
-  renderReviews(fallback);
-  if(has){
-    fetch(`https://geonames-proxy.tryvalmedia.workers.dev?city=${encodeURIComponent(loc.city)}&state=${encodeURIComponent(loc.state)}`)
-      .then(r=>r.json()).then(d=>{
-        if(!d.cities||!d.cities.length) return;
-        const nearby=d.cities.filter(n=>n&&n.toLowerCase()!==loc.city.toLowerCase()).filter((n,i,a)=>a.indexOf(n)===i).slice(0,5);
-        if(nearby.length>=2) renderReviews([locStr,`${nearby[0]}, ${loc.state}`,`${nearby[1]}, ${loc.state}`]);
-      }).catch(()=>{});
   }
 }
 
@@ -1262,21 +1251,10 @@ function applyLocation(loc){
   const has=loc.city&&loc.city!=='undefined'&&loc.city!=='';
   const locStr=has?(loc.state?`${loc.city}, ${loc.state}`:loc.city):null;
   if(has){
-
     const h1=document.getElementById('hero-h1');
     if(h1) h1.innerHTML=`Get Your Appliance Fixed<br>in ${loc.city} — Available Today`;
     const rt=document.getElementById('reviews-title');
     if(rt) rt.textContent=`What ${loc.city} Homeowners Are Saying`;
-  }
-  const fallback=has?[locStr,locStr,locStr]:['Verified Homeowner','Verified Homeowner','Verified Homeowner'];
-  renderReviews(fallback);
-  if(has){
-    fetch(`https://geonames-proxy.tryvalmedia.workers.dev?city=${encodeURIComponent(loc.city)}&state=${encodeURIComponent(loc.state)}`)
-      .then(r=>r.json()).then(d=>{
-        if(!d.cities||!d.cities.length) return;
-        const nearby=d.cities.filter(n=>n&&n.toLowerCase()!==loc.city.toLowerCase()).filter((n,i,a)=>a.indexOf(n)===i).slice(0,5);
-        if(nearby.length>=2) renderReviews([locStr,`${nearby[0]}, ${loc.state}`,`${nearby[1]}, ${loc.state}`]);
-      }).catch(()=>{});
   }
 }
 
